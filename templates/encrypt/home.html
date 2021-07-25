@@ -1,0 +1,95 @@
+{% extends 'encrypt/base.html' %}
+{% block title %}
+ | Home
+{% endblock %}
+{% block extra_head %}
+    <style>
+        .encryptBtn{
+            margin-right: 15px;
+            box-shadow: #b3b3b3 10px 10px 50px;
+        }
+        .decryptBtn{
+
+            margin-left: 15px;
+            box-shadow: #b3b3b3 10px 10px 50px;
+        }
+        .encryptBtn:hover{
+        background-color:#26797D;
+            margin-right: 15px;
+            box-shadow: #b3b3b3 10px 10px 80px;
+        }
+        .decryptBtn:hover{
+        background-color:#CD3813;
+            margin-left: 15px;
+            box-shadow: #b3b3b3 10px 10px 80px;
+        }
+        @media(max-width: 476px){
+            .encryptBtn{
+                margin-right: 0px;
+            }
+            .decryptBtn{
+                margin-left: 0px;
+            }
+            .encryptBtn:hover{
+                margin-right: 0px;
+            }
+            .decryptBtn:hover{
+                margin-left: 0px;
+            }
+        }
+        @media(max-width: 439px){
+            .decryptBtn{
+                margin-top: 15px;
+            }
+        }
+        .c1{
+        background-color:#30979C;
+        }
+        .c2{
+        background-color:#EE6C4D;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<br>
+<div class="container">
+    <div class="noproject-wrapper center" style="background-color: #d9d9d92d;">
+        <h3 style="color:#4d4d4d">Encrypt & Decrypt your text with <span style="color: #4d4d4d;font-weight:bold;">CipherText</span></h3>
+        <div class="container">
+            <a href="/encrypt" class="btn-large c1 encryptBtn">
+                <i class="material-icons white-text left">lock</i>
+                <span class="bold">Encrypt</span>
+            </a>
+
+            <a href="/decrypt" class="btn-large c2 decryptBtn">
+                <i class="material-icons white-text left">lock_open</i>
+                <span class="bold">Decrypt</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--<div class="row">-->
+<!--  <div class="col px-md-5">-->
+<!--      <div class="p-3 border center bg-light"><h3 style="color: #737373">Decrypt text with <span style="color: #4d4d4d">EncryptionFog</span></h3>-->
+<!--        <div class="container">-->
+<!--             <a href="{% url 'encrypt:encrypt' %}" class="btn-large green encryptBtn">-->
+<!--                <i class="material-icons white-text left">lock</i>-->
+<!--                <span class="bold">Encrypt</span>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--  </div>-->
+<!--     <div class="col px-md-5">-->
+<!--      <div class="p-3 border center bg-light"><h3 style="color: #737373">Encrypt text with <span style="color: #4d4d4d">EncryptionFog</span></h3>-->
+<!--        <div class="container">-->
+<!--            <a href="{% url 'encrypt:decrypt' %}" class="btn-large red decryptBtn">-->
+<!--                <i class="material-icons white-text left">lock_open</i>-->
+<!--                <span class="bold">Decrypt</span>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--  </div>-->
+
+<!--</div>-->
+{% endblock %}

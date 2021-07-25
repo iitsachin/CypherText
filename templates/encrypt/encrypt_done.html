@@ -1,0 +1,40 @@
+{% extends 'encrypt/base.html' %}
+{% block title %}
+ | Encrypted
+{% endblock %}
+{% block extra_head %}
+    <style>
+    .mr{
+    margin-left:30px;}
+    .c1:hover{
+        background-color:#26797D;
+
+        }
+        .c2:hover{
+        background-color:#CD3813;
+
+        }
+    .c1{
+        background-color:#30979C;
+        }
+        .c2{
+        background-color:#EE6C4D;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<div style="margin: 25px">
+
+  {% if result %}
+  <h4 style="font-weight:bold">Encrypted Text </h4>
+    <p>{{result}}</p>
+<!--  <h4>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;XXX&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</h4>-->
+  {% endif %}
+</div>
+
+            <a href="{% url 'encrypt:decrypt' %}" class="btn c2 decryptBtn mr">
+                <i class="material-icons white-text left">lock_open</i>
+                <span class="bold">Decrypt</span>
+            </a>
+
+{% endblock %}
